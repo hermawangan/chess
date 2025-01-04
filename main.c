@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <HashMap.c>
 
 #define r 8
 #define c 8
@@ -10,16 +11,6 @@ void print(int **board);
 void freeBoard(int **board);
 void fillBoard(int **board);
 
-struct pieces
-{
-    char king[1][3];
-    char queen[1][3];
-    char bishops[2][5];
-    char rooks[2][5];
-    char knights[2][5];
-    char pawns[8][17];
-};
-
 /*
 king = K
 q = Q
@@ -27,40 +18,6 @@ bishop = B
 knight = N
 rook = R
 pawns = P
-
-white K = 11
-white Q = 12
-white B1 = 13
-white B2 = 14
-white N1 = 15
-white N2 = 16
-white R1 = 17
-white R2 = 18
-white p1 = 31
-white p2 = 32
-white p3 = 33
-white p4 = 34
-white p5 = 35
-white p6 = 36
-white p7 = 37
-white p8 = 38
-
-black K = 21
-black Q = 22
-black B1 = 23
-black B2 = 24
-black N1 = 25
-black N2 = 26
-black R1 = 27
-black R2 = 28
-black p1 = 41
-black p2 = 42
-black p3 = 43
-black p4 = 44
-black p5 = 45
-black p6 = 46
-black p7 = 47
-black p8 = 48
 */
 
 int main()
